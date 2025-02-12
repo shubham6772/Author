@@ -1,15 +1,21 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Login, SignUp } from "./pages"
+import { useEffect } from "react";
+import { Loader } from "./components";
+import AppRoutes from "./router/router";
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-      </Routes>
-    </BrowserRouter>
-  )
-}
 
-export default App
+  useEffect(()=>{
+    
+  },[]);
+
+  return (
+    <div className="app-container">
+      <Loader />
+      <div className="router-container">
+        <AppRoutes />
+      </div>
+    </div>
+  );
+};
+
+export default App;

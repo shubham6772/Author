@@ -1,0 +1,23 @@
+@use "../../assets/Theme.scss" as *;
+
+.error-main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    color: $black;
+}
+
+span{
+    color : $anchor-color;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
