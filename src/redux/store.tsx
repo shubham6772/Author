@@ -1,9 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import CounterSlice from "./slices/counterSlice"
+import LoginSlice from "./slices/LoginSlice";
+import LoaderSlice from "./slices/LoaderSlice/LoaderSlice";
+import QuestionSlice from './slices/QuestionSlice.tsx/QuestionSlice'
 
 export const store = configureStore({
     reducer : {
-        counter : CounterSlice
+        LoginSlice,
+        LoaderSlice,
+        QuestionSlice,
     }
 });
 
