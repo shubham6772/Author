@@ -7,7 +7,7 @@ interface LoginState {
 
 const initialState : LoginState = {
     mode : 'login',
-    auth : true,
+    auth : false,
 }
 
 const LoginSlice = createSlice({
@@ -21,14 +21,21 @@ const LoginSlice = createSlice({
              }
         },
 
-        toggleAuthState : (state) => {
+        setAuthSuccess : (state) => {
             return{
                 ...state,
-                auth :!state.auth
+                auth : true,
+            }
+        },
+
+        setAuthFail : (state) => {
+            return{
+                ...state,
+                auth : false,
             }
         }
     }
 })
 
-export const {toggleMode, toggleAuthState} = LoginSlice.actions;
+export const {toggleMode, setAuthFail, setAuthSuccess} = LoginSlice.actions;
 export default LoginSlice.reducer;

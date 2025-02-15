@@ -1,12 +1,9 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { Loader } from "./components";
 import AppRoutes from "./router/router";
+// import { useAppSelector } from "./redux/hooks/hook";
 
 const App = () => {
-
-  useEffect(()=>{
-    
-  },[]);
 
   return (
     <div className="app-container">

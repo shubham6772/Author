@@ -3,37 +3,51 @@ import books from "../../assets/books.png"
 import books2 from "../../assets/books2.png"
 import { LoginForm, SignupForm } from "../../components";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hook";
-import { toggleMode } from "../../redux/slices/LoginSlice";
+import { setAuthSuccess, toggleMode } from "../../redux/slices/LoginSlice";
 import useNavigationHook from "../../redux/hooks/navigationHook";
 import { KeyMapper } from "../../KeyMapper";
+import { useEffect, useState } from "react";
+import { getConfigLocal, setConfigLocal } from "../../StorageManager/StorageManager";
 
 const Login = () => {
-
-    const {mode, auth} = useAppSelector((state : any)=>state.LoginSlice)
-    const {goTo} = useNavigationHook();
+    const [isAuthChecked, setIsAuthChecked] = useState(false);
+    const { mode, auth } = useAppSelector((state: any) => state.LoginSlice)
+    const { replace } = useNavigationHook();
     const dispatch = useAppDispatch()
 
+    useEffect(() => {
+        if (getConfigLocal(KeyMapper.auth_success) || auth) {
+            replace(KeyMapper.Pages.QUESTION);
+            dispatch(setAuthSuccess());
+        } else {
+            setIsAuthChecked(true);
+        }
+    }, []);
     // if(auth){
     //     return null;
     // }
 
-    const handleSubmit = () => {  
-        if(auth){
-            goTo(KeyMapper.Pages.QUESTION);
-        }else{
-            alert("Invalid credentials");
-        }
+    const handleSubmit = () => {
+        dispatch(setAuthSuccess());
+        setConfigLocal(KeyMapper.auth_success, true);
+        replace(KeyMapper.Pages.QUESTION);
+        // if(auth){
+        // }else{
+        //     alert("Invalid credentials");
+        // }
     }
+
+    if (!isAuthChecked) return null;
 
     return (
         <div className="main-container">
             <div className="card-container">
                 <div className="header-text-container">
-                    <h2>{mode == "login" ? `Login` : `Signup` }</h2>
-                    <p>{mode == "login" ? `Don't` : `Already` } have an account? <span onClick={()=>dispatch(toggleMode())}>{mode == "login" ? `Sign Up` : `Log in`}</span></p>
+                    <h2>{mode == "login" ? `Login` : `Signup`}</h2>
+                    <p>{mode == "login" ? `Don't` : `Already`} have an account? <span onClick={() => dispatch(toggleMode())}>{mode == "login" ? `Sign Up` : `Log in`}</span></p>
                 </div>
 
-              {mode == "login" ? <LoginForm onSubmit={handleSubmit} />  : <SignupForm onSubmit={handleSubmit} /> }
+                {mode == "login" ? <LoginForm onSubmit={handleSubmit} /> : <SignupForm onSubmit={handleSubmit} />}
             </div>
 
 

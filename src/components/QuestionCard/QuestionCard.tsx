@@ -6,8 +6,9 @@ interface questionData {
     onSelect: Function;
 }
 const QuestionCard = ({ question, options, onSelect }: questionData) => {
+
     return (
-        <div className='questionCard-root'>
+        <div className={`questionCard-root`}>
             <div className='question-title'>{question}</div>
             <div className='options-container'>
                 {options.map((option: any, index: any) => {
@@ -17,7 +18,6 @@ const QuestionCard = ({ question, options, onSelect }: questionData) => {
         </div>
     )
 }
-
 
 const OptionCard = ({ img, label, value, onSelect }: { img: string; label: string; value: string; onSelect: (value: string) => void }) => {
     return (

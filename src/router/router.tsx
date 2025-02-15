@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Login, Error, Dashboard, QuestionPage } from "../pages";
 import { KeyMapper } from "../KeyMapper";
 import ProtectedRoute from "./ProtectedRoute";
@@ -11,7 +11,8 @@ const AppRoutes = () => {
     const routerConfig = createBrowserRouter([
         {
             path: KeyMapper.Pages.AUTH,
-            element:  (auth ? <Navigate to={KeyMapper.Pages.DASHBOARD} replace /> : <Login />)
+            element:  <Login />
+            // element:  (auth ? <Navigate to={KeyMapper.Pages.DASHBOARD} replace /> : <Login />)
         },
         {
             path: KeyMapper.Pages.DASHBOARD,

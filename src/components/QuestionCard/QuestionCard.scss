@@ -1,4 +1,4 @@
-@use "../../assets/Theme.scss" as *;
+@use "../../assets/Theme.scss"as *;
 
 .questionCard-root {
     display: flex;
@@ -12,6 +12,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    animation: fadeInUp 0.5s ease-out;
 }
 
 .question-title {
@@ -22,7 +23,8 @@
 
 .options-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns */
     gap: 10px;
     width: 100%;
 }
@@ -82,3 +84,14 @@
     border-color: $primary;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
