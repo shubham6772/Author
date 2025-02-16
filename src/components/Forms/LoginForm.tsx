@@ -9,15 +9,15 @@ const LoginForm = ({onSubmit} : LoginProps) => {
     
     return (
         <>
-            <div className="input-container">
+            <div className="login-input-container">
                 <TextField className="login-input-box" id="outlined-basic" label="Username" variant="outlined" size="medium" color="success" />
             </div>
 
-            <div className="input-container">
+            <div className="login-input-container">
                 <TextField className="login-input-box" id="outlined-basic" label="Password" variant="outlined" size="medium" color="success" />
             </div>
 
-            <div className="input-container">
+            <div className="login-input-container">
                 <Button variant="contained" onClick={()=> onSubmit()} color="success">Submit</Button>
             </div>
 

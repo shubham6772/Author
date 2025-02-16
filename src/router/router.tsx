@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Login, Error, Dashboard, QuestionPage } from "../pages";
+import { Login, Error, Dashboard, QuestionPage, Books, BookDetails } from "../pages";
 import { KeyMapper } from "../KeyMapper";
 import ProtectedRoute from "./ProtectedRoute";
 import { RootState } from "../redux/store"; // Adjust based on your store setup
@@ -19,8 +19,19 @@ const AppRoutes = () => {
             element: (
                 <ProtectedRoute auth={auth}>
                     <Dashboard />
-                </ProtectedRoute>
+                 </ProtectedRoute>
             ),
+
+            children : [
+                {
+                    path : KeyMapper.DASHBOARDCHILD.BOOKS,
+                    element : <Books />
+                },
+                {
+                    path : KeyMapper.DASHBOARDCHILD.DETAILS,
+                    element : <BookDetails />
+                }
+            ]
         },
         {
             path: KeyMapper.Pages.QUESTION,

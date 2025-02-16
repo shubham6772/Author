@@ -1,14 +1,18 @@
 @use "../../assets/Theme.scss" as *;
 
-.main-container {
+.login-main-container {
     width: 100%;
-    min-height: 100vh;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-around; /* Ensures content is centered horizontally */
+    align-items: center; /* Centers content vertically */
+    min-height: calc(100vh - 80px); /* Ensures it fills remaining space below header */
+    padding-top: 80px; /* Prevents content from overlapping with the header */
+    box-sizing: border-box; /* Ensures padding doesn’t shrink the height */
+    overflow-y: auto;
 }
 
-.header-text-container {
+
+.login-header-text-container {
     margin-bottom: 10px;
 
     p {
@@ -26,7 +30,7 @@
     }
 }
 
-.card-container {
+.login-card-container {
     width: 400px;
     padding: 10px 10px;
 }
@@ -39,7 +43,7 @@
     display: flex;
     justify-content: flex-start;
 
-    .books1 {
+    .login-books1 {
         object-fit: contain;
         border-radius: 10px;
         rotate: -5deg;
@@ -56,7 +60,7 @@
     justify-content: flex-end;
 
 
-    .books2 {
+    .login-books2 {
         object-fit: contain;
         border-radius: 10px;
         rotate: 5deg;
@@ -71,7 +75,7 @@
 }
 
 
-.input-container {
+.login-input-container {
     display: flex;
     flex-direction: column;
     justify-content: center;

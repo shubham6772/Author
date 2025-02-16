@@ -6,6 +6,11 @@ export const KeyMapper = {
         ERROR : '*',
     },
 
+    DASHBOARDCHILD :{
+        BOOKS : '/',
+        DETAILS : ':bookId',
+    }, 
+
     CONFIG : 'athrConfig',
     QUESTION_SHOWN : 'questionShown',
     auth_success : 'authSuccess',
