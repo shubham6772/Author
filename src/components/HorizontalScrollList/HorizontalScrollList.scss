@@ -1,0 +1,59 @@
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 10px;
+    width: 100%; /* Adjust as needed */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+  
+  .carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 100px;
+    background: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .scroll-btn {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .scroll-btn:hover {
+    background: #555;
+  }
+  
+  .left {
+    position: absolute;
+    left: 0;
+  }
+  
+  .right {
+    position: absolute;
+    right: 0;
+  }
+  

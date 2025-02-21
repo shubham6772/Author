@@ -1,0 +1,30 @@
+// .skeleton-loader-main-container{
+    // margin-top: 20px;
+    // padding: 20px;
+// }
+
+.skeleton-loader-image-container{
+    
+    .skeleton-loader-image{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+.skeleton-loader-detail-container{
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom:  1px solid rgba(0, 0, 0, 0.1);
+    border-right:  1px solid rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0px 2px 4px rgba(44, 42, 42, 0.123);
+    width: 210px;
+    height: 120px;
+}
+
+.skeleton-loader-price-container{
+   .skeleton-loader-price{
+        margin-bottom: -20px;
+        z-index: 1;
+   }
+}

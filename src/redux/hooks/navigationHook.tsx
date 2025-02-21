@@ -19,7 +19,7 @@ function useNavigationHook() {
                 dispatch(toggleLoader()); // Hide loader
 
                 navigateTimeout = setTimeout(() => {
-                    console.log("Navigating to:", navigationPath);
+                    // console.log("Navigating to:", navigationPath);
                     if (typeof navigationPath == "string")
                         navigate(navigationPath, { replace: replaceNavigation });
                     else

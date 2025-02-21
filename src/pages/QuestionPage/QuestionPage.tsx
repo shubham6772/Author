@@ -3,7 +3,7 @@ import "./QuestionPage.scss";
 import { questionData } from "../../data/data";
 import { QuestionCard } from "../../components";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hook";
-import { nextQuestion, setAnswer, setQuestionCount } from "../../redux/slices/QuestionSlice.tsx/QuestionSlice";
+import { nextQuestion, setAnswer, setQuestionCount } from "../../redux/slices/QuestionSlice/QuestionSlice";
 import useNavigationHook from "../../redux/hooks/navigationHook";
 import { KeyMapper } from "../../KeyMapper";
 import { getConfigLocal, setConfigLocal } from "../../StorageManager/StorageManager";
