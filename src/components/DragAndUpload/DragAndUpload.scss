@@ -1,0 +1,11 @@
+@use "../../assets/Theme.scss" as *;
+
+.drag-and-upload-file-outer-box{
+        border: 2px dashed $dark-green;
+        border-radius : 8px;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        background-color: $white;
+}

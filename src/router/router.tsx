@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Login, Error, Dashboard, QuestionPage, Books, BookDetails } from "../pages";
+import { Login, Error, Dashboard, QuestionPage, Books, BookDetails, PublishPage } from "../pages";
 import { KeyMapper } from "../KeyMapper";
 import ProtectedRoute from "./ProtectedRoute";
 import { RootState } from "../redux/store"; // Adjust based on your store setup
@@ -11,7 +11,7 @@ const AppRoutes = () => {
     const routerConfig = createBrowserRouter([
         {
             path: KeyMapper.Pages.AUTH,
-            element:  <Login />
+            element: <Login />
             // element:  (auth ? <Navigate to={KeyMapper.Pages.DASHBOARD} replace /> : <Login />)
         },
         {
@@ -19,19 +19,27 @@ const AppRoutes = () => {
             element: (
                 <ProtectedRoute auth={auth}>
                     <Dashboard />
-                 </ProtectedRoute>
+                </ProtectedRoute>
             ),
 
-            children : [
+            children: [
                 {
-                    path : KeyMapper.DASHBOARDCHILD.BOOKS,
-                    element : <Books />
+                    path: KeyMapper.DASHBOARDCHILD.BOOKS,
+                    element: <Books />
                 },
                 {
-                    path : KeyMapper.DASHBOARDCHILD.DETAILS,
-                    element : <BookDetails />
-                }
+                    path: KeyMapper.DASHBOARDCHILD.DETAILS,
+                    element: <BookDetails />
+                },
             ]
+        },
+        {
+            path: KeyMapper.Pages.PUBLISH,
+            element: (
+                <ProtectedRoute auth={auth}>
+                    <PublishPage />
+                </ProtectedRoute>
+            ),
         },
         {
             path: KeyMapper.Pages.QUESTION,

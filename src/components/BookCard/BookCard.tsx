@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import "./BookCard.scss";
 import BlurContainer from "../BlurContainer/BlurContainer";
 import CircleRating from "../CircularRating.tsx/CircularRating";
@@ -13,7 +13,7 @@ interface bookProps {
   genre: string
   handleClick: Function,
 }
-const BookCard = ({ id, title, image, author, rating, price, genre, handleClick }: bookProps) => {
+const BookCard = memo(({ id, title, image, author, rating, price, genre, handleClick }: bookProps) => {
 
   const [showBlurContainer, setShowBlurContainer] = useState(false);
   const [showNoPreview, setShowNoPreview] = useState(false);
@@ -22,7 +22,7 @@ const BookCard = ({ id, title, image, author, rating, price, genre, handleClick 
   const handleOnLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
     if (event.currentTarget.naturalWidth < event.currentTarget.naturalHeight) {
       setShowBlurContainer(true);
-    }
+  }
 
   }
 
@@ -57,6 +57,6 @@ const BookCard = ({ id, title, image, author, rating, price, genre, handleClick 
       </div>
     </div>
   )
-}
+})
 
 export default BookCard

@@ -7,6 +7,9 @@ import QuestionPage from "./QuestionPage/QuestionPage";
 import Books from "./Dashboard/Books/Books";
 import BookDetails from "./Dashboard/BookDetails/BookDetails";
 
+// Publish Pages
+import PublishPage from "./PublishPage/PublishPage";
+
 export {
     Login,
     Error,
@@ -14,4 +17,5 @@ export {
     QuestionPage,
     Books,
     BookDetails,
+    PublishPage,
 }
