@@ -3,6 +3,7 @@ import LoginSlice from "./slices/LoginSlice";
 import LoaderSlice from "./slices/LoaderSlice/LoaderSlice";
 import QuestionSlice from './slices/QuestionSlice/QuestionSlice'
 import BookListPageSlice from './slices/BookListPageSlice/BookListPageSlice'
+import BookDetailsPageSlice  from "./slices/BookDetailPageSlice/BookDetailPageSlice";
 
 export const store = configureStore({
     reducer : {
@@ -10,6 +11,7 @@ export const store = configureStore({
         LoaderSlice,
         QuestionSlice,
         BookListPageSlice,
+        BookDetailsPageSlice,
     }
 });
 

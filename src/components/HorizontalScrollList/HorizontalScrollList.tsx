@@ -1,7 +1,9 @@
 import { useRef } from "react";
 import "./HorizontalScrollList.scss";
+import horizontalData from "../../data/mock-horizontal-list-data.json"
+import BookCard from "../BookCard/BookCard";
 
-const items = Array.from({ length: 20 }, (_, i) => `Item ${i + 1}`);
+// const items = Array.from({ length: 20 }, (_, i) => `Item ${i + 1}`);
 
 const HorizontalScrollList = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -17,14 +19,18 @@ const HorizontalScrollList = () => {
     }
   };
 
+  const handleClick = () => {
+
+  }
+
   return (
     <div className="carousel-wrapper">
       <button className="scroll-btn left" onClick={() => scroll("left")}>⬅️</button>
       
       <div ref={scrollRef} className="carousel-container">
-        {items.map((item, index) => (
+        {horizontalData.map((item, index) => (
           <div key={index} className="carousel-item">
-            {item}
+            <BookCard {...item} handleClick={handleClick} />
           </div>
         ))}
       </div>

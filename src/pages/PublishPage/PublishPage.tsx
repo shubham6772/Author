@@ -1,4 +1,4 @@
-import { HorizontalScrollList } from "../../components"
+// import { HorizontalScrollList } from "../../components"
 import DragAndUpload from "../../components/DragAndUpload/DragAndUpload"
 import "./PublishPage.scss"
 
@@ -8,7 +8,7 @@ const PublishPage = () => {
             <div className="publish-page-drag-and-upload-container">
                 <DragAndUpload />
             </div>
-            <HorizontalScrollList />
+            {/* <HorizontalScrollList /> */}
         </div>
     )
 }

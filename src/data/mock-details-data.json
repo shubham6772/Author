@@ -1,0 +1,33 @@
+[
+  {
+    "bookTitle": "Vagabond (VIZBIG Edition), Vol. 2: Enlightenment VIZBIG Edition",
+    "author": "Patric Brissard",
+    "genre": "Fiction",
+    "price": "832.13",
+    "actualPrice": "2000.22",
+    "publicationDate": "10/19/2001",
+    "isbn": "887538549-1",
+    "publisher": "Meedoo",
+    "weight" : "560",
+    "language": "Swedish",
+    "format": "Hardcover",
+    "id": "af9bf7ca6de21d39bee72bbe72d738a6aa41faa8",
+    "edition": "International Edition",
+    "shippingTime": 14,
+    "page": 16085,
+    "coverImage": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "rating": {
+      "averageRating": 4.2,
+      "totalRatings": 10500,
+      "topThreeRatings": [
+        { "user": "User123", "readerType": "active reader", "totalReview" : 130,  "rating": 5, "title" : "Amazing", "comment": "This book is an absolute masterpiece! The storytelling is immersive, with well-developed characters that feel real and relatable. The author’s writing style is engaging, painting vivid scenes that transport you into the world of the book. The emotions are powerful—there are moments of joy, heartbreak, and deep reflection that stay with you long after reading. The pacing is perfect, keeping me hooked from start to finish. The themes explored are thought-provoking, touching on love, loss, resilience, and the complexities of human nature. Every chapter kept me wanting more. This is a book that lingers in your mind, making you reflect on its deeper messages. Highly recommended for anyone looking for a truly unforgettable read!", "date": "1708854467000" },
+        { "user": "User456", "readerType": "casual reader", "totalReview" : 100, "rating": 3.5, "title" : "Masterpiece", "comment": "Loved the writing style.", "date" : "1582624067000" },
+        { "user": "User789", "readerType": "casual reader",  "totalReview" : 10, "rating": 3, "title" : "Love this amazing book!!",  "comment": "Good but overhyped.","date" : "1330163267000" }
+      ]
+    },
+    "availability": false,
+    "shortSummary": "A gripping tale of self-discovery, war, and enlightenment as a wandering swordsman embarks on a journey to become the strongest warrior.",
+
+    "longSummary": "Vagabond (VIZBIG Edition), Vol. 2: Enlightenment follows the legendary swordsman Musashi Miyamoto as he delves deeper into his quest for true strength. Set in feudal Japan, this beautifully illustrated and masterfully written story captures the essence of discipline, self-reflection, and the harsh realities of battle. As Musashi continues his path, he encounters formidable opponents, spiritual teachings, and internal struggles that shape his growth. This edition includes extended artwork, exclusive behind-the-scenes content, and a carefully crafted translation that brings the world of Vagabond to life. Perfect for fans of samurai epics and historical fiction, this book is an unforgettable exploration of the mind and soul of a warrior."
+  }
+]
